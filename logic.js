@@ -49,3 +49,13 @@ number.addEventListener('input',function(){
     numberError.textContent="";
     else numberError.textContent="Check your phone number"
 })
+
+const pwd = document.querySelector('#pwd');
+const pwdError = document.querySelector('.pwd-error');
+pwd.addEventListener('input', function() {
+let pass = RegExp('^[A-Z a-z]{8}$')
+if (pass.test(pwd.value))
+    pwdError.textContent = "";
+  else
+    pwdError.textContent = "Wrong password";
+});
