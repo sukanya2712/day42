@@ -40,3 +40,12 @@ email.addEventListener('input',function(){
     emailError.textContent="";
     else emailError.textContent="Not a valid Email"
 })
+
+const number = document.querySelector('#number')
+const numberError = document.querySelector('.number-error')
+number.addEventListener('input',function(){
+    let numberRegex = RegExp('^[0-9]{2,}[0-9]{10,}$')
+    if(numberRegex.test(number.value))
+    numberError.textContent="";
+    else numberError.textContent="Check your phone number"
+})
